@@ -4,7 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WalletController;
 use App\Http\Controllers\TransferController;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,4 +18,4 @@ use App\Http\Controllers\TransferController;
 */
 
 Route::get('/wallet', [WalletController::class, 'index']);
-Route::post('/wallet', [TransferController::class, 'store']);
+Route::post('/transfer', [TransferController::class, 'store']);

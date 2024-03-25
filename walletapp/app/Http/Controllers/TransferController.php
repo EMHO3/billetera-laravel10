@@ -10,6 +10,9 @@ class TransferController extends Controller
 {
     public function store(Request $request){
         $wallet=Wallet::find($request->wallet_id);
+        if (!$wallet) {
+            return response()->json(['error' => 'Billetera no encontrada'], 404);
+        }
         $wallet->money=$wallet->money +$request->monto;
         $wallet->update();
 

@@ -6,7 +6,8 @@ export const TransferForm = ({form,onChange,onSubmit}) => {
     <form className="form-inline justify-content-center"
           onSubmit={onSubmit}>
         <div className="form-group mb-2">
-            <input type="text" className="form-control"
+            <input type="text" 
+            className="border-2 border-solid	pl-2 h-10 w-3/12 mt-6	 border-sky-500 rounded-md "
             placeholder="Descripcion"
             name="descripcion"
             value={form?.descripcion}
@@ -15,13 +16,13 @@ export const TransferForm = ({form,onChange,onSubmit}) => {
         <div className="form-group mb-2">
             <input type="text" 
             placeholder="Valor"
-            className="form-control"
+            className="border-2 border-solid	pl-2 h-10 w-3/12 mt-6	 border-sky-500 rounded-md "
             name="monto"
             value={form?.monto} 
             onChange={onChange}></input>
         </div>
         <button type="submit" 
-        className="btn btn-primary mb-2">
+        className="border-2 border-solid	h-10 w-2/12 mt-6	bg-cyan-400	 border-sky-500 rounded-md">
             AGREGAR
         </button>
     </form>

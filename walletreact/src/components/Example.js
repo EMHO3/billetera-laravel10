@@ -24,7 +24,7 @@ class Example extends Component  {
         try {
             let config={
                 method:'POST',
-                heders:{
+                headers:{
                     'Accept':'application/json',
                     'content-type':'application/json'
                 },
@@ -34,6 +34,7 @@ class Example extends Component  {
             console.log('config', config)
             let res=await fetch(`${url}/api/transfer`,config)
             let data = await res.json()
+            console.log('data', data)
 
             this.setState({
                 transfers:this.state.transfers.concat(data),
@@ -72,10 +73,10 @@ class Example extends Component  {
   
   render(){
     return (
-        <div className="container">
+        <div className='bg-slate-100'>
             <div className="row justify-content-center">
                 <div className="col-md-12 m-t-md">
-                    <p className='title'> $1000</p>
+                    <h1 className='text-8xl'> $ {this.state.money}</h1>
                 </div>
                 <div className='col-md-12'>
                     <TransferForm
